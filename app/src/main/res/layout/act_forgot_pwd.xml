@@ -8,14 +8,20 @@
         android:orientation="vertical">
 
     <include layout="@layout/view_toolbar"/>
-    <RadioButton
-            android:layout_width=""
-            android:layout_height=""/>
 
     <View
             android:layout_width="match_parent"
             android:background="@color/westore_line_bg"
             android:layout_height="@dimen/line_height"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:textColor="@color/westore_text_dark"
+            android:text="帐号验证"
+            android:paddingTop="40dp"
+            android:textSize="14sp"
+            android:paddingLeft="@dimen/margin_common_1"
+            android:layout_height="wrap_content"/>
 
     <LinearLayout
             android:layout_width="match_parent"
@@ -43,7 +49,6 @@
                 android:background="@color/transparent"
                 android:hint="请输入手机号"
                 android:textSize="14sp"
-                android:textColorHint="@color/westore_text_hint"
                 android:layout_height="match_parent"/>
 
     </LinearLayout>
@@ -70,21 +75,62 @@
                 android:layout_centerVertical="true"
                 android:layout_toLeftOf="@+id/btn_sms_code"
                 android:layout_alignParentLeft="true"
-                android:textColorHint="@color/westore_text_hint"
                 android:layout_height="match_parent"/>
 
         <TextView
                 android:id="@+id/btn_sms_code"
                 android:layout_width="wrap_content"
                 android:layout_alignParentRight="true"
-                android:text="获取验证码>"
+                android:text="获取验证码"
                 android:gravity="center"
                 android:layout_centerVertical="true"
                 android:textSize="15sp"
-                android:textColor="#999999"
+                android:textColor="@color/westore_text_blue"
                 android:layout_height="match_parent"/>
     </RelativeLayout>
 
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/margin_common_1"
+            android:layout_marginRight="@dimen/margin_common_1"
+            android:background="@color/westore_line_bg"
+            android:layout_height="0.8dp"/>
+
+
+    <TextView
+            android:layout_width="match_parent"
+            android:textColor="@color/westore_text_dark"
+            android:text="设置新密码"
+            android:paddingTop="40dp"
+            android:textSize="14sp"
+            android:paddingLeft="@dimen/margin_common_1"
+            android:layout_height="wrap_content"/>
+
+    <EditText
+            android:layout_width="match_parent"
+            android:background="@color/transparent"
+            android:hint="请输入6-20位新密码"
+            android:textSize="14sp"
+            android:layout_marginLeft="@dimen/margin_common_1"
+            android:layout_marginRight="@dimen/margin_common_1"
+            android:layout_height="@dimen/login_input_height"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/margin_common_1"
+            android:layout_marginRight="@dimen/margin_common_1"
+            android:background="@color/westore_line_bg"
+            android:layout_height="0.8dp"/>
+
+    <EditText
+            android:layout_width="match_parent"
+            android:background="@color/transparent"
+            android:hint="请再次输入新密码"
+            android:textSize="14sp"
+            android:layout_marginLeft="@dimen/margin_common_1"
+            android:layout_marginRight="@dimen/margin_common_1"
+            android:layout_height="@dimen/login_input_height"/>
 
     <View
             android:layout_width="match_parent"
@@ -103,18 +149,8 @@
             android:enabled="false"
             android:layout_marginLeft="@dimen/margin_common_1"
             android:layout_marginRight="@dimen/margin_common_1"
-            android:text="登录"
+            android:text="确认设置"
             android:layout_height="@dimen/btn_common_height"/>
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:text="密码登录>"
-            android:padding="10dp"
-            android:layout_marginTop="15dp"
-            android:gravity="center"
-            android:layout_centerVertical="true"
-            android:textSize="15sp"
-            android:textColor="@color/westore_text_blue"
-            android:layout_height="wrap_content"/>
 
 </LinearLayout>
