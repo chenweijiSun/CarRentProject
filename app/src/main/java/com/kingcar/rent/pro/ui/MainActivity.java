@@ -1,25 +1,19 @@
 package com.kingcar.rent.pro.ui;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.*;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.kingcar.rent.pro.R;
 import com.kingcar.rent.pro.base.BaseActivity;
-import com.kingcar.rent.pro.ui.login.ForgotPwdActivity;
-import com.kingcar.rent.pro.ui.login.LoginActivity;
-import com.kingcar.rent.pro.ui.login.LoginByPwdActivity;
-import com.kingcar.rent.pro.ui.login.RegisterActivity;
 
-import static android.widget.CompoundButton.*;
+import static android.widget.CompoundButton.OnCheckedChangeListener;
 
 public class MainActivity extends BaseActivity implements OnCheckedChangeListener {
 
-    @Bind(android.R.id.tabcontent)
-    FrameLayout tabcontent;
-    @Bind(android.R.id.tabs)
-    TabWidget tabs;
+
+    @Bind(R.id.fra_content)
+    FrameLayout fraContent;
     @Bind(R.id.main_tab_first)
     RadioButton mainTabFirst;
     @Bind(R.id.main_tab_first_unread_tv)
@@ -40,15 +34,6 @@ public class MainActivity extends BaseActivity implements OnCheckedChangeListene
     RadioButton mainTabFive;
     @Bind(R.id.main_tab_group)
     LinearLayout mainTabGroup;
-    @Bind(android.R.id.tabhost)
-    TabHost tabHost;
-
-    private Intent firstIntent;
-    private Intent secondIntent;
-    private Intent thirdIntent;
-    private Intent fourthIntent;
-    private Intent fifthIntent;
-
     private int mState = 0;
 
     @Override
@@ -58,20 +43,6 @@ public class MainActivity extends BaseActivity implements OnCheckedChangeListene
 
     @Override
     protected void init() {
-        tabHost.setup();
-
-        firstIntent = new Intent(this, LoginActivity.class);
-        secondIntent = new Intent(this, LoginByPwdActivity.class);
-        thirdIntent = new Intent(this, RegisterActivity.class);
-        fourthIntent = new Intent(this, ForgotPwdActivity.class);
-        fifthIntent = new Intent(this, LoginActivity.class);
-
-        tabHost.addTab(tabHost.newTabSpec("first").setIndicator("first").setContent(firstIntent));
-        tabHost.addTab(tabHost.newTabSpec("second").setIndicator("second").setContent(secondIntent));
-        tabHost.addTab(tabHost.newTabSpec("third").setIndicator("third").setContent(thirdIntent));
-        tabHost.addTab(tabHost.newTabSpec("fourth").setIndicator("fourth").setContent(fourthIntent));
-        tabHost.addTab(tabHost.newTabSpec("fifth").setIndicator("fifth").setContent(fifthIntent));
-
 
         mainTabFirst.setOnCheckedChangeListener(this);
         mainTabSecond.setOnCheckedChangeListener(this);
@@ -100,27 +71,22 @@ public class MainActivity extends BaseActivity implements OnCheckedChangeListene
         switch (mState) {
             case 0:
                 mainTabFirst.setChecked(true);
-                tabHost.setCurrentTabByTag("first");
                 break;
 
             case 1:
                 mainTabSecond.setChecked(true);
-                tabHost.setCurrentTabByTag("second");
                 break;
 
             case 2:
                 mainTabThree.setChecked(true);
-                tabHost.setCurrentTabByTag("third");
                 break;
 
             case 3:
                 mainTabFour.setChecked(true);
-                tabHost.setCurrentTabByTag("fourth");
                 break;
 
             case 4:
                 mainTabFive.setChecked(true);
-                tabHost.setCurrentTabByTag("fifth");
                 break;
 
             default:
@@ -153,4 +119,6 @@ public class MainActivity extends BaseActivity implements OnCheckedChangeListene
             }
         }
     }
+
+
 }
