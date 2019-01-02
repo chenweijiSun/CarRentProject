@@ -8,9 +8,6 @@
         android:orientation="vertical">
 
     <include layout="@layout/view_toolbar"/>
-    <RadioButton
-            android:layout_width=""
-            android:layout_height=""/>
 
     <View
             android:layout_width="match_parent"

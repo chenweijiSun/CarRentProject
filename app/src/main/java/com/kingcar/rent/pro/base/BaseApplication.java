@@ -21,7 +21,7 @@ import com.socks.library.KLog;
 public class BaseApplication extends Application {
     private static BaseApplication app;
     private String deviceId;
-    public String weChatPayMode;//"recharge","purchase"
+    public String weChatPayMode;
 
     @Override
     public void onCreate() {
@@ -49,8 +49,10 @@ public class BaseApplication extends Application {
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
-        if (newConfig.fontScale != 1)//非默认值
+        //非默认值
+        if (newConfig.fontScale != 1){
             getResources();
+        }
         super.onConfigurationChanged(newConfig);
     }
 

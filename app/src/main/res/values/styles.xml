@@ -85,17 +85,4 @@
         <item name="android:textSize">@dimen/text_size_14sp</item>
     </style>
 
-    <style name="MMTabButton">
-        <item name="android:textSize">12.0dp</item>
-        <item name="android:textColor">@color/westore_text_dark</item>
-        <item name="android:gravity">center_horizontal</item>
-        <item name="android:background">@null</item>
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">0.7dp</item>
-        <item name="android:layout_marginRight">0.7dp</item>
-        <item name="android:button">@null</item>
-        <item name="android:layout_weight">1</item>
-    </style>
-
 </resources>
