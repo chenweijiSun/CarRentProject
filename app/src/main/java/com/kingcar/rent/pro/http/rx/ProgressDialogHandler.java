@@ -38,7 +38,7 @@ public class ProgressDialogHandler extends Handler {
         if (pd == null) {
             AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.loadingDialog);
             LayoutInflater inflater = LayoutInflater.from(context);
-            View view = inflater.inflate(R.layout.loading_dialog, null);
+            View view = inflater.inflate(R.layout.dialog_loading, null);
             ImageView iv= (ImageView) view.findViewById(R.id.loading);
 //            Glide.with(context).load(R.mipmap.loading).dontAnimate().into(iv);
             pd = builder.create();

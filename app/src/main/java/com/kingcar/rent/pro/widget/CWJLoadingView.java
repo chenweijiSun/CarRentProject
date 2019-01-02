@@ -64,7 +64,7 @@ public class CWJLoadingView extends FrameLayout {
 
 
     private void init() {
-        inflate(getContext(), R.layout.kit_loading_view, this);
+        inflate(getContext(), R.layout.dialog_loading_view, this);
         ButterKnife.bind(this, this);
 //        setBackgroundResource(R.color.default_page_bgcolor);
         setClickable(true);

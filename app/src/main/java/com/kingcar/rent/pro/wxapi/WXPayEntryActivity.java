@@ -3,10 +3,6 @@ package com.kingcar.rent.pro.wxapi;
 
 import android.content.Intent;
 import android.text.TextUtils;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 
 import com.kingcar.rent.pro.Constant;
@@ -19,9 +15,6 @@ import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.tencent.mm.opensdk.openapi.IWXAPIEventHandler;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 
-import butterknife.Bind;
-import butterknife.OnClick;
-
 
 public class WXPayEntryActivity extends ToolBarActivity implements IWXAPIEventHandler {
 
@@ -31,7 +24,7 @@ public class WXPayEntryActivity extends ToolBarActivity implements IWXAPIEventHa
 
     @Override
     protected int getLayoutResId() {
-        return R.layout.pay_result;
+        return R.layout.act_pay_result;
     }
 
     @Override

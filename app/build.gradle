@@ -39,12 +39,11 @@ allprojects {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support:design:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-
     //Rxjava
     implementation 'io.reactivex:rxandroid:1.1.0'
     implementation 'io.reactivex:rxjava:1.1.5'
@@ -75,5 +74,4 @@ dependencies {
     //城市选择控件
     implementation project(':citypicker')
     implementation 'liji.library.dev:citypickerview:3.1.5'
-
 }
