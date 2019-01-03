@@ -33,6 +33,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import com.kingcar.rent.pro.Constant;
 import com.kingcar.rent.pro.R;
 import com.kingcar.rent.pro.adapter.CarSourceAdapter;
 import com.kingcar.rent.pro.base.BaseFragment;
@@ -96,6 +97,13 @@ public class CarSourceFragment extends BaseFragment implements
      */
     private void initData() {
         list = new ArrayList<>();
+        List<CarSourceInfo> usuallyInfos=new ArrayList<>();
+        usuallyInfos.add(new CarSourceInfo("Dave"));
+        usuallyInfos.add(new CarSourceInfo("张晓飞"));
+        usuallyInfos.add(new CarSourceInfo("杨光福"));
+        usuallyInfos.add(new CarSourceInfo("阿钟"));
+        usuallyInfos.add(new CarSourceInfo("胡继群"));
+        list.add(new CarSourceInfo("常用","0",Constant.LOG_STAR,usuallyInfos));
         list.add(new CarSourceInfo("Dave"));
         list.add(new CarSourceInfo("张晓飞"));
         list.add(new CarSourceInfo("杨光福"));

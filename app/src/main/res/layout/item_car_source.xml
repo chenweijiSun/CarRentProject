@@ -7,18 +7,54 @@
     <TextView
         android:id="@+id/tv_word"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:background="#ebebeb"
+        android:layout_height="25dp"
+        android:background="#F7F7F7"
+        android:textSize="@dimen/text_size_14sp"
         android:gravity="center_vertical"
-        android:paddingLeft="?android:attr/listPreferredItemPaddingLeft" />
+        android:paddingLeft="@dimen/padding_10dp" />
 
-    <TextView
-        android:id="@+id/tv_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:minHeight="?android:attr/listPreferredItemHeightSmall"
-        android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
-        android:paddingRight="?android:attr/listPreferredItemPaddingRight"
-        android:textAppearance="?android:attr/textAppearanceListItemSmall" />
+    <com.kingcar.rent.pro.widget.MyGridView
+            android:id="@+id/gridView"
+            android:listSelector="@color/transparent"
+            android:dividerHeight="0dp"
+            android:scrollbars="none"
+            android:visibility="gone"
+            android:numColumns="5"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <LinearLayout
+            android:id="@+id/ll_name"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding_15dp"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="35dp"
+                android:src="@mipmap/icon_car_logo"
+                android:layout_height="32dp"/>
+
+        <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="别克"
+                android:paddingLeft="@dimen/padding_5dp"
+                android:minHeight="?android:attr/listPreferredItemHeightSmall"
+                android:paddingRight="?android:attr/listPreferredItemPaddingRight"
+                android:textAppearance="?android:attr/textAppearanceListItemSmall" />
+
+    </LinearLayout>
+
+
+    <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:background="#F3F3F3"
+            android:layout_height="0.5dp"/>
 </LinearLayout>

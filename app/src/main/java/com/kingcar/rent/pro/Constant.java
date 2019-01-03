@@ -39,6 +39,7 @@ public class Constant {
     public static final String LOCATION_CITY="location_city";
     public static final String LOGIN_FIRST = "请先登录";
     public static final String LOG_USER="cwj";
+    public static final String LOG_STAR="★";
 
     public static final String IMAGE_UNSPECIFIED = "image/*";
     public static final int IMAGE_CODE = 0; // 这里的IMAGE_CODE是自己任意定义的

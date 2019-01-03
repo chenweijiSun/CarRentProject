@@ -24,6 +24,8 @@ package com.kingcar.rent.pro.model.entity;
 
 import com.kingcar.rent.pro.utils.PinYinUtils;
 
+import java.util.List;
+
 /**
  *
  * @author chenweiji
@@ -38,10 +40,33 @@ public class CarSourceInfo {
     //拼音首字母
     private String headerWord;
 
+    private List<CarSourceInfo> usuallyInfo;
+
     public CarSourceInfo(String name) {
         this.name = name;
         this.pinyin = PinYinUtils.getPinyin(name);
         headerWord = pinyin.substring(0, 1);
+    }
+
+    public CarSourceInfo(String name, String pinyin, String headerWord) {
+        this.name = name;
+        this.pinyin = pinyin;
+        this.headerWord = headerWord;
+    }
+
+    public CarSourceInfo(String name, String pinyin, String headerWord, List<CarSourceInfo> usuallyInfo) {
+        this.name = name;
+        this.pinyin = pinyin;
+        this.headerWord = headerWord;
+        this.usuallyInfo = usuallyInfo;
+    }
+
+    public List<CarSourceInfo> getUsuallyInfo() {
+        return usuallyInfo;
+    }
+
+    public void setUsuallyInfo(List<CarSourceInfo> usuallyInfo) {
+        this.usuallyInfo = usuallyInfo;
     }
 
     public String getPinyin() {
