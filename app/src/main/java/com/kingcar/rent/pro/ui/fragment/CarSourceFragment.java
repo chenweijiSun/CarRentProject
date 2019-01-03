@@ -34,6 +34,7 @@ import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.kingcar.rent.pro.R;
+import com.kingcar.rent.pro.adapter.CarSourceAdapter;
 import com.kingcar.rent.pro.base.BaseFragment;
 import com.kingcar.rent.pro.model.entity.CarSourceInfo;
 import com.kingcar.rent.pro.widget.WordsNavigation;
@@ -79,7 +80,10 @@ public class CarSourceFragment extends BaseFragment implements
     }
 
     private void initListView() {
-
+        CarSourceAdapter adapter = new CarSourceAdapter(mActivity);
+        adapter.setData(list);
+        listView.setAdapter(adapter);
+        listView.setOnScrollListener(this);
     }
 
     @Override
@@ -141,11 +145,49 @@ public class CarSourceFragment extends BaseFragment implements
 
     @Override
     public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-
+        //当滑动列表的时候，更新右侧字母列表的选中状态
+        wordsNavView.setTouchIndex(list.get(firstVisibleItem).getHeaderWord());
     }
 
     @Override
     public void wordsChange(String words) {
-
+        updateWord(words);
+        updateListView(words);
     }
+
+    /**
+     * @param words 首字母
+     */
+    private void updateListView(String words) {
+        for (int i = 0; i < list.size(); i++) {
+            String headerWord = list.get(i).getHeaderWord();
+            //将手指按下的字母与列表中相同字母开头的项找出来
+            if (words.equals(headerWord)) {
+                //将列表选中哪一个
+                listView.setSelection(i);
+                //找到开头的一个即可
+                return;
+            }
+        }
+    }
+
+    /**
+     * 更新中央的字母提示
+     *
+     * @param words 首字母
+     */
+    private void updateWord(String words) {
+        tvWordsNav.setText(words);
+        tvWordsNav.setVisibility(View.VISIBLE);
+        //清空之前的所有消息
+        mHandler.removeCallbacksAndMessages(null);
+        //1s后让tv隐藏
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                tvWordsNav.setVisibility(View.GONE);
+            }
+        }, 500);
+    }
+
 }
