@@ -22,6 +22,7 @@
                 android:textSize="@dimen/text_size_14sp"
                 android:text="指南者2019999指南者2019999指南者2019999"
                 android:layout_width="match_parent"
+                android:paddingRight="@dimen/padding_20dp"
                 android:layout_centerVertical="true"
                 android:layout_height="wrap_content"/>
 
