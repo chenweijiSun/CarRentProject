@@ -2,13 +2,22 @@ package com.kingcar.rent.pro.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.*;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.kingcar.rent.pro.R;
 import com.kingcar.rent.pro.base.BaseActivity;
+import com.kingcar.rent.pro.base.BaseFragment;
+import com.kingcar.rent.pro.ui.fragment.CarSourceFragment;
+import com.kingcar.rent.pro.ui.fragment.HomeFragment;
+import com.kingcar.rent.pro.ui.fragment.MineFragment;
+import com.kingcar.rent.pro.ui.fragment.ShopCarFragment;
 import com.kingcar.rent.pro.ui.login.LoginActivity;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static android.widget.CompoundButton.OnCheckedChangeListener;
 
@@ -39,6 +48,14 @@ public class MainActivity extends BaseActivity implements OnCheckedChangeListene
     LinearLayout mainTabGroup;
     private int mState = 0;
 
+
+    private HomeFragment homeFragment;
+    private CarSourceFragment carSourceFragment;
+    private ShopCarFragment shopcartFragment;
+    private MineFragment mineFragment;
+    private List<BaseFragment> mFragments = new ArrayList<BaseFragment>();
+
+
     @Override
     protected int getLayoutResId() {
         return R.layout.act_main;
@@ -51,7 +68,6 @@ public class MainActivity extends BaseActivity implements OnCheckedChangeListene
         mainTabSecond.setOnCheckedChangeListener(this);
         mainTabFour.setOnCheckedChangeListener(this);
         mainTabFive.setOnCheckedChangeListener(this);
-
         mainTabThree.setOnClickListener(this);
     }
 
@@ -80,18 +96,34 @@ public class MainActivity extends BaseActivity implements OnCheckedChangeListene
         switch (mState) {
             case 1:
                 mainTabFirst.setChecked(true);
+                if(homeFragment==null){
+                    homeFragment=new HomeFragment();
+                }
+                changeFragment(homeFragment);
                 break;
 
             case 2:
                 mainTabSecond.setChecked(true);
+                if(carSourceFragment==null){
+                    carSourceFragment=new CarSourceFragment();
+                }
+                changeFragment(carSourceFragment);
                 break;
 
             case 4:
                 mainTabFour.setChecked(true);
+                if(shopcartFragment==null){
+                    shopcartFragment=new ShopCarFragment();
+                }
+                changeFragment(shopcartFragment);
                 break;
 
             case 5:
                 mainTabFive.setChecked(true);
+                if(mineFragment==null){
+                    mineFragment=new MineFragment();
+                }
+                changeFragment(mineFragment);
                 break;
 
             default:
@@ -125,5 +157,20 @@ public class MainActivity extends BaseActivity implements OnCheckedChangeListene
         }
     }
 
+    private void changeFragment(BaseFragment baseFragment) {
+        FragmentTransaction mBeginTransaction = this.getSupportFragmentManager().beginTransaction();
+        if (!mFragments.contains(baseFragment)) {
+            mFragments.add(baseFragment);
+            mBeginTransaction.add(R.id.fra_content, baseFragment);
+        }
+        for (BaseFragment mBaseFragment : mFragments) {
+            if (mBaseFragment == baseFragment) {
+                mBeginTransaction.show(mBaseFragment);
+            } else {
+                mBeginTransaction.hide(mBaseFragment);
+            }
+        }
+        mBeginTransaction.commit();
+    }
 
 }
