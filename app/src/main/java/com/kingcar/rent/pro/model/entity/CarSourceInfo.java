@@ -20,52 +20,43 @@
  * the third party without the agreement of wandaph. If Any problem cannot be solved in the
  * procedure of programming should be feedback to wandaph Co,. Ltd Inc in time, Thank you!
  */
-package com.kingcar.rent.pro.ui.login;
+package com.kingcar.rent.pro.model.entity;
 
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.EditText;
-import android.widget.TextView;
-import butterknife.Bind;
-import butterknife.ButterKnife;
-import com.kingcar.rent.pro.R;
-import com.kingcar.rent.pro.base.ToolBarActivity;
+import com.kingcar.rent.pro.utils.PinYinUtils;
 
 /**
+ *
  * @author chenweiji
- * @version Id: LoginActivity.java, v 0.1 2019/1/2 15:24 chenweiji Exp $$
+ * @version Id: CarSourceInfo.java, v 0.1 2019/1/3 10:30 chenweiji Exp $$
  */
-public class LoginActivity extends ToolBarActivity {
-    @Bind(R.id.et_phone)
-    EditText etPhone;
-    @Bind(R.id.btn_sms_code)
-    TextView btnSmsCode;
+public class CarSourceInfo {
 
-    @Override
-    protected int getLayoutResId() {
-        return R.layout.act_login;
+    //姓名
+    private String name;
+    //拼音
+    private String pinyin;
+    //拼音首字母
+    private String headerWord;
+
+    public CarSourceInfo(String name) {
+        this.name = name;
+        this.pinyin = PinYinUtils.getPinyin(name);
+        headerWord = pinyin.substring(0, 1);
     }
 
-    @Override
-    protected void init() {
-        initTitleAndCanBack("登录");
+    public String getPinyin() {
+        return pinyin;
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_login, menu);
-        return true;
+    public String getName() {
+        return name;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.menu_register) {
-            //注册
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
+    public void setName(String name) {
+        this.name = name;
     }
 
-
+    public String getHeaderWord() {
+        return headerWord;
+    }
 }

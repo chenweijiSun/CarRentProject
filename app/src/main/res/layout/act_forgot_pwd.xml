@@ -44,7 +44,7 @@
                 android:paddingRight="@dimen/padding_10dp"
                 android:layout_height="wrap_content"/>
 
-        <EditText
+        <com.kingcar.rent.pro.widget.ClearEditText
                 android:layout_width="match_parent"
                 android:background="@color/transparent"
                 android:hint="请输入手机号"
@@ -67,7 +67,7 @@
             android:layout_marginRight="@dimen/margin_common_1"
             android:layout_height="@dimen/login_input_height">
 
-        <EditText
+        <com.kingcar.rent.pro.widget.ClearEditText
                 android:layout_width="match_parent"
                 android:background="@color/transparent"
                 android:hint="请输入验证码"
@@ -107,7 +107,7 @@
             android:paddingLeft="@dimen/margin_common_1"
             android:layout_height="wrap_content"/>
 
-    <EditText
+    <com.kingcar.rent.pro.widget.ClearEditText
             android:layout_width="match_parent"
             android:background="@color/transparent"
             android:hint="请输入6-20位新密码"
@@ -139,7 +139,7 @@
             android:background="@color/westore_line_bg"
             android:layout_height="0.8dp"/>
 
-    <TextView
+    <Button
             android:layout_width="match_parent"
             android:background="@drawable/selector_btn_common"
             android:textColor="@color/white"

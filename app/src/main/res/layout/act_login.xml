@@ -14,6 +14,13 @@
             android:background="@color/westore_line_bg"
             android:layout_height="@dimen/line_height"/>
 
+    <ImageView
+            android:layout_width="wrap_content"
+            android:src="@mipmap/icon_login_logo"
+            android:layout_marginTop="@dimen/margin_common_1"
+            android:layout_marginBottom="@dimen/margin_common_1"
+            android:layout_height="wrap_content"/>
+
     <LinearLayout
             android:layout_width="match_parent"
             android:orientation="horizontal"
@@ -23,6 +30,7 @@
             android:layout_height="@dimen/login_input_height">
 
         <ImageView
+                android:src="@mipmap/icon_phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
@@ -35,11 +43,13 @@
                 android:paddingRight="@dimen/padding_10dp"
                 android:layout_height="wrap_content"/>
 
-        <EditText
+        <com.kingcar.rent.pro.widget.ClearEditText
+                android:id="@+id/et_phone"
                 android:layout_width="match_parent"
                 android:background="@color/transparent"
                 android:hint="请输入手机号"
                 android:textSize="14sp"
+                android:drawableRight="@mipmap/icon_clear"
                 android:textColorHint="@color/westore_text_hint"
                 android:layout_height="match_parent"/>
 
@@ -59,7 +69,7 @@
             android:layout_marginRight="@dimen/margin_common_1"
             android:layout_height="@dimen/login_input_height">
 
-        <EditText
+        <com.kingcar.rent.pro.widget.ClearEditText
                 android:layout_width="match_parent"
                 android:background="@color/transparent"
                 android:hint="请输入验证码"
@@ -90,14 +100,14 @@
             android:background="@color/westore_line_bg"
             android:layout_height="0.8dp"/>
 
-    <TextView
+    <Button
             android:layout_width="match_parent"
             android:background="@drawable/selector_btn_common"
             android:textColor="@color/white"
             android:layout_marginTop="50dp"
             android:textSize="18sp"
-            android:gravity="center"
             android:enabled="false"
+            android:gravity="center"
             android:layout_marginLeft="@dimen/margin_common_1"
             android:layout_marginRight="@dimen/margin_common_1"
             android:text="登录"

@@ -24,6 +24,7 @@
 
         <ImageView
                 android:layout_width="wrap_content"
+                android:src="@mipmap/icon_phone"
                 android:layout_height="wrap_content"/>
 
         <TextView
@@ -35,7 +36,7 @@
                 android:paddingRight="@dimen/padding_10dp"
                 android:layout_height="wrap_content"/>
 
-        <EditText
+        <com.kingcar.rent.pro.widget.ClearEditText
                 android:layout_width="match_parent"
                 android:background="@color/transparent"
                 android:hint="请输入手机号"
@@ -59,7 +60,7 @@
             android:layout_marginRight="@dimen/margin_common_1"
             android:layout_height="@dimen/login_input_height">
 
-        <EditText
+        <com.kingcar.rent.pro.widget.ClearEditText
                 android:layout_width="match_parent"
                 android:background="@color/transparent"
                 android:hint="请输入验证码"
@@ -100,16 +101,19 @@
                 android:id="@+id/left2"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
+                android:src="@mipmap/icon_pwd"
                 android:layout_width="wrap_content"
+                android:layout_marginRight="@dimen/padding_10dp"
                 android:layout_height="wrap_content"/>
 
-        <EditText
+        <com.kingcar.rent.pro.widget.ClearEditText
                 android:layout_toRightOf="@+id/left2"
                 android:id="@+id/et_pwd"
                 android:layout_width="match_parent"
                 android:background="@color/transparent"
                 android:hint="6-20位密码"
                 android:textSize="14sp"
+                android:inputType="textPassword"
                 android:layout_centerVertical="true"
                 android:layout_toLeftOf="@+id/btn_see"
                 android:textColorHint="@color/westore_text_hint"
@@ -120,7 +124,9 @@
                 android:layout_width="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:layout_height="match_parent"/>
+                android:src="@mipmap/icon_see"
+                android:padding="@dimen/padding_10dp"
+                android:layout_height="wrap_content"/>
     </RelativeLayout>
 
     <View
@@ -130,7 +136,7 @@
             android:background="@color/westore_line_bg"
             android:layout_height="@dimen/line_height"/>
 
-    <TextView
+    <Button
             android:layout_width="match_parent"
             android:background="@drawable/selector_btn_common"
             android:textColor="@color/white"

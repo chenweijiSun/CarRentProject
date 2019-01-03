@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android" android:exitFadeDuration="300">
-
-    <item android:state_pressed="true">
-        <shape>
-            <solid android:color="#FF7978"/>
-            <corners android:radius="55dp"/>
-        </shape>
-    </item>
-
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+          android:exitFadeDuration="300">
     <item android:state_enabled="false">
         <shape>
             <solid android:color="#B0B3BA"/>
             <corners android:radius="55dp"/>
         </shape>
     </item>
-    <item >
+    <item android:state_pressed="true">
         <shape>
             <solid android:color="#B0B3BA"/>
+            <corners android:radius="55dp"/>
+        </shape>
+    </item>
+    <item android:state_pressed="false">
+        <shape>
+            <solid android:color="#FF7978"/>
+            <corners android:radius="55dp"/>
+        </shape>
+    </item>
+
+    <item>
+        <shape>
+            <solid android:color="#FF7978"/>
             <corners android:radius="55dp"/>
         </shape>
     </item>
