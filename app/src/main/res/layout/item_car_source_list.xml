@@ -1,6 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_15dp"
+        android:paddingTop="@dimen/padding_10dp"
+        android:paddingBottom="@dimen/padding_10dp"
+        android:paddingRight="@dimen/padding_15dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/tv_name"
+                android:layout_toLeftOf="@+id/tv_prive"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_14sp"
+                android:text="指南者2019999指南者2019999指南者2019999"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/tv_prive"
+                android:textColor="@color/westore_text_red_f96161"
+                android:textSize="@dimen/text_size_15sp"
+                android:text="17万"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:paddingTop="8dp"
+            android:paddingBottom="2dp"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/tv_guige"
+                android:layout_toLeftOf="@+id/tv_zhidao_prive"
+                android:textColor="#333333"
+                android:textSize="@dimen/text_size_14sp"
+                android:text="中规 银/黑"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/tv_zhidao_prive"
+                android:textColor="#333333"
+                android:textSize="@dimen/text_size_14sp"
+                android:text="指导价:16.98万/下5.20万"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/tv_user"
+                android:textColor="#999999"
+                android:textSize="@dimen/text_size_14sp"
+                android:text="北京汽车销售有限公司"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"/>
+
+        <ImageView
+                android:id="@+id/iv_renzheng"
+                android:layout_toRightOf="@id/tv_user"
+                android:layout_toLeftOf="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:scaleType="fitStart"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_qiyerenzheng"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/tv_time"
+                android:textColor="#999999"
+                android:textSize="@dimen/text_size_14sp"
+                android:text="14:00"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
 
 </LinearLayout>

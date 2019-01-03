@@ -25,6 +25,7 @@ package com.kingcar.rent.pro.ui.carsource;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,6 +35,7 @@ import butterknife.ButterKnife;
 import com.kingcar.rent.pro.R;
 import com.kingcar.rent.pro.adapter.base.RecyBaseAdapter;
 import com.kingcar.rent.pro.base.ToolBarActivity;
+import com.kingcar.rent.pro.widget.SpaceItemDecoration;
 
 /**
  * @author chenweiji
@@ -51,6 +53,13 @@ public class CarSourceListActivity extends ToolBarActivity {
     @Override
     protected void init() {
         initTitleAndCanBack("奥迪A6");
+
+        LinearLayoutManager manager=new LinearLayoutManager(this);
+        manager.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(manager);
+        recyclerView.addItemDecoration(new SpaceItemDecoration(5));
+        recyclerView.setAdapter(new CarSourceListAdapter());
+
     }
 
     class CarSourceListAdapter extends RecyclerView.Adapter {

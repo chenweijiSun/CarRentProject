@@ -22,6 +22,7 @@
  */
 package com.kingcar.rent.pro.ui.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -29,6 +30,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import butterknife.Bind;
@@ -38,6 +40,7 @@ import com.kingcar.rent.pro.R;
 import com.kingcar.rent.pro.adapter.CarSourceAdapter;
 import com.kingcar.rent.pro.base.BaseFragment;
 import com.kingcar.rent.pro.model.entity.CarSourceInfo;
+import com.kingcar.rent.pro.ui.carsource.CarSourceListActivity;
 import com.kingcar.rent.pro.widget.WordsNavigation;
 
 import java.util.ArrayList;
@@ -85,6 +88,13 @@ public class CarSourceFragment extends BaseFragment implements
         adapter.setData(list);
         listView.setAdapter(adapter);
         listView.setOnScrollListener(this);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                startActivity(new Intent(mActivity,CarSourceListActivity.class));
+            }
+        });
     }
 
     @Override
