@@ -76,4 +76,6 @@ dependencies {
     implementation 'liji.library.dev:citypickerview:3.1.5'
     //BasePopup通用化弹出框
     implementation 'com.github.razerdp:BasePopup:2.1.5'
+    //轮播图
+    implementation 'cn.bingoogolapple:bga-banner:2.2.5'
 }
