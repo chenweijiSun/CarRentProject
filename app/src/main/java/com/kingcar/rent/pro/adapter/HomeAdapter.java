@@ -7,8 +7,8 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.kingcar.rent.pro.ITEM_TYPE;
-import com.kingcar.rent.pro.adapter.holder.BannerHolder;
 import com.kingcar.rent.pro.adapter.holder.BannerHolderBuilder;
+import com.kingcar.rent.pro.adapter.holder.ClassificationHolderBuilder;
 import com.kingcar.rent.pro.model.HomeData;
 
 import java.util.ArrayList;
@@ -50,21 +50,22 @@ public class HomeAdapter extends RecyclerView.Adapter {
             return new BannerHolderBuilder(mContext,parent).build();
 
         } else if (viewType == ITEM_TYPE.CLASSIFICATION_TYPE.ordinal()) {
-            return new ClassificationHolder(mLayoutInflater.inflate(R.layout.home_classification_item, parent, false));
+            return new ClassificationHolderBuilder(mContext,parent).build();
 
         }
+        return null;
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         HomeData homeData = dataList.get(position);
 
-        if (holder instanceof BannerHolderBuilder) {
-            BannerHolderBuilder bannerHolder = (BannerHolderBuilder) holder;
+        if (holder instanceof BannerHolderBuilder.ViewHolder) {
+            BannerHolderBuilder.ViewHolder bannerHolder = (BannerHolderBuilder.ViewHolder) holder;
 
 
-        } else if (holder instanceof ClassificationHolder) {
-            ClassificationHolder classificationHolder = (ClassificationHolder) holder;
+        } else if (holder instanceof ClassificationHolderBuilder.ViewHolder) {
+            ClassificationHolderBuilder.ViewHolder classificationHolder = (ClassificationHolderBuilder.ViewHolder) holder;
 
         }
 

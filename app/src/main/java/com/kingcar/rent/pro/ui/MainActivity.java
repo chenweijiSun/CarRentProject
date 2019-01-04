@@ -74,6 +74,8 @@ public class MainActivity extends BaseActivity implements OnCheckedChangeListene
         mainTabThree.setOnClickListener(this);
 
         publishPopup=new PublishPopup(this);
+
+        mainTabFirst.setChecked(true);
     }
 
     @Override

@@ -22,16 +22,34 @@
  */
 package com.kingcar.rent.pro.ui.fragment;
 
+import android.os.Bundle;
 import android.os.Message;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import com.kingcar.rent.pro.ITEM_TYPE;
 import com.kingcar.rent.pro.R;
+import com.kingcar.rent.pro.adapter.HomeAdapter;
 import com.kingcar.rent.pro.base.BaseFragment;
+import com.kingcar.rent.pro.model.HomeData;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- *
  * @author chenweiji
  * @version Id: HomeFragment.java, v 0.1 2019/1/3 11:00 chenweiji Exp $$
  */
 public class HomeFragment extends BaseFragment {
+
+    @Bind(R.id.recyclerView)
+    RecyclerView recyclerView;
+    private HomeAdapter homeAdapter;
+
     @Override
     protected int getLayoutResId() {
         return R.layout.frag_home;
@@ -39,11 +57,26 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     protected void init() {
+        LinearLayoutManager manager = new LinearLayoutManager(mActivity);
+        manager.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(manager);
+        homeAdapter=new HomeAdapter(mActivity);
+        recyclerView.setAdapter(homeAdapter);
+        initData();
 
+        recyclerView.setNestedScrollingEnabled(false);
+
+    }
+    private void initData(){
+        List<HomeData> dataList=new ArrayList<>();
+        dataList.add(new HomeData(ITEM_TYPE.BANNER_TYPE));
+        dataList.add(new HomeData(ITEM_TYPE.CLASSIFICATION_TYPE));
+        homeAdapter.setDataList(dataList);
     }
 
     @Override
     protected void ui(int what, Message msg) {
 
     }
+
 }

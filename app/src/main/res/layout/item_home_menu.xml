@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:paddingTop="15dp"
+        android:layout_height="wrap_content">
+
+    <ImageView
+            android:layout_width="37dp"
+            android:src="@mipmap/d_icon_home_nengyaun"
+            android:layout_height="37dp"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/text_size_14sp"
+            android:textColor="@color/westore_text_dark"
+            android:text="新能源汽车"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:paddingTop="10dp"
+            android:layout_height="wrap_content"/>
+
+</LinearLayout>

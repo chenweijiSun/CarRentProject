@@ -39,7 +39,6 @@
                 <RadioButton
                         android:id="@+id/main_tab_first"
                         style="@style/MMTabButton"
-                        android:checked="true"
                         android:drawableTop="@drawable/selector_main_tab_first"
                         android:textColor="@drawable/select_main_tab_text"
                         android:text="首页"/>

@@ -12,6 +12,10 @@ public class HomeData implements Serializable {
 
     private ITEM_TYPE type;
 
+    public HomeData(ITEM_TYPE type) {
+        this.type = type;
+    }
+
     public ITEM_TYPE getType() {
         return type;
     }
