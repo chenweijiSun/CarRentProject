@@ -22,7 +22,6 @@
  */
 package com.kingcar.rent.pro.ui.carsource;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
@@ -30,12 +29,21 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.PopupWindow;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.kingcar.rent.pro.R;
-import com.kingcar.rent.pro.adapter.base.RecyBaseAdapter;
 import com.kingcar.rent.pro.base.ToolBarActivity;
 import com.kingcar.rent.pro.widget.SpaceItemDecoration;
+import com.kingcar.rent.pro.widget.popup.CarScreenPopup;
+import com.kingcar.rent.pro.widget.popup.CarTypePopup;
+import razerdp.basepopup.BasePopupWindow;
+
+import static com.kingcar.rent.pro.widget.popup.CarTypePopup.CAR_TYPE_STYLE_XML_1;
+import static com.kingcar.rent.pro.widget.popup.CarTypePopup.CAR_TYPE_STYLE_XML_2;
+import static razerdp.basepopup.BasePopupWindow.*;
 
 /**
  * @author chenweiji
@@ -44,6 +52,21 @@ import com.kingcar.rent.pro.widget.SpaceItemDecoration;
 public class CarSourceListActivity extends ToolBarActivity {
     @Bind(R.id.recyclerView)
     RecyclerView recyclerView;
+    @Bind(R.id.radioBtn1)
+    RadioButton radioBtn1;
+    @Bind(R.id.radioBtn2)
+    RadioButton radioBtn2;
+    @Bind(R.id.radioBtn3)
+    RadioButton radioBtn3;
+    @Bind(R.id.radioBtn4)
+    RadioButton radioBtn4;
+    @Bind(R.id.radioGroup)
+    RadioGroup radioGroup;
+
+    private CarTypePopup carTypePopup;
+    private CarTypePopup facadePopup;
+    private CarTypePopup areaPopup;
+    private CarScreenPopup screenPopup;
 
     @Override
     protected int getLayoutResId() {
@@ -53,12 +76,65 @@ public class CarSourceListActivity extends ToolBarActivity {
     @Override
     protected void init() {
         initTitleAndCanBack("奥迪A6");
+        initPopup();
 
-        LinearLayoutManager manager=new LinearLayoutManager(this);
+        LinearLayoutManager manager = new LinearLayoutManager(this);
         manager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(manager);
         recyclerView.addItemDecoration(new SpaceItemDecoration(5));
         recyclerView.setAdapter(new CarSourceListAdapter());
+
+    }
+
+    private void initPopup() {
+        carTypePopup = new CarTypePopup(this,CAR_TYPE_STYLE_XML_1);
+        facadePopup = new CarTypePopup(this,CAR_TYPE_STYLE_XML_2);
+        areaPopup = new CarTypePopup(this,CAR_TYPE_STYLE_XML_2);
+        screenPopup=new CarScreenPopup(this);
+
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == R.id.radioBtn1) {
+                    carTypePopup.showPopupWindow(R.id.radioGroup);
+                }else  if (checkedId == R.id.radioBtn2) {
+                    facadePopup.showPopupWindow(R.id.radioGroup);
+                }else  if (checkedId == R.id.radioBtn3) {
+                    areaPopup.showPopupWindow(R.id.radioGroup);
+                }else  if (checkedId == R.id.radioBtn4) {
+                    screenPopup.showPopupWindow(R.id.radioGroup);
+                }
+            }
+        });
+
+//        areaPopup.setOnDismissListener(new OnDismissListener() {
+//            @Override
+//            public void onDismiss() {
+//                radioBtn3.setChecked(false);
+//            }
+//        });
+//
+//        facadePopup.setOnDismissListener(new OnDismissListener() {
+//            @Override
+//            public void onDismiss() {
+//                radioBtn2.setChecked(false);
+//            }
+//        });
+//
+//        screenPopup.setOnDismissListener(new OnDismissListener() {
+//            @Override
+//            public void onDismiss() {
+//                radioBtn4.setChecked(false);
+//            }
+//        });
+//
+//
+//        carTypePopup.setOnDismissListener(new OnDismissListener() {
+//            @Override
+//            public void onDismiss() {
+//                radioBtn1.setChecked(false);
+//            }
+//        });
 
     }
 
@@ -81,7 +157,7 @@ public class CarSourceListActivity extends ToolBarActivity {
             return 10;
         }
 
-        class ViewHolder extends RecyclerView.ViewHolder{
+        class ViewHolder extends RecyclerView.ViewHolder {
 
             public ViewHolder(View itemView) {
                 super(itemView);

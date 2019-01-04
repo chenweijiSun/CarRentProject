@@ -9,11 +9,13 @@
     <include layout="@layout/view_toolbar"/>
 
     <RadioGroup
+            android:id="@+id/radioGroup"
             android:layout_width="match_parent"
             android:orientation="horizontal"
             android:layout_height="45dp">
 
         <RadioButton
+                android:id="@+id/radioBtn1"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:button="@null"
@@ -25,6 +27,7 @@
                 android:layout_height="match_parent"/>
 
         <RadioButton
+                android:id="@+id/radioBtn2"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:button="@null"
@@ -36,6 +39,7 @@
                 android:layout_height="match_parent"/>
 
         <RadioButton
+                android:id="@+id/radioBtn3"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:button="@null"
@@ -47,6 +51,7 @@
                 android:layout_height="match_parent"/>
 
         <RadioButton
+                android:id="@+id/radioBtn4"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:button="@null"

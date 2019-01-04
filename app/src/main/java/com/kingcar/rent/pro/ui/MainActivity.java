@@ -15,6 +15,7 @@ import com.kingcar.rent.pro.ui.fragment.HomeFragment;
 import com.kingcar.rent.pro.ui.fragment.MineFragment;
 import com.kingcar.rent.pro.ui.fragment.ShopCarFragment;
 import com.kingcar.rent.pro.ui.login.LoginActivity;
+import com.kingcar.rent.pro.widget.popup.PublishPopup;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,6 +49,8 @@ public class MainActivity extends BaseActivity implements OnCheckedChangeListene
     LinearLayout mainTabGroup;
     private int mState = 0;
 
+    private PublishPopup publishPopup;
+
 
     private HomeFragment homeFragment;
     private CarSourceFragment carSourceFragment;
@@ -69,12 +72,15 @@ public class MainActivity extends BaseActivity implements OnCheckedChangeListene
         mainTabFour.setOnCheckedChangeListener(this);
         mainTabFive.setOnCheckedChangeListener(this);
         mainTabThree.setOnClickListener(this);
+
+        publishPopup=new PublishPopup(this);
     }
 
     @Override
     public void onClick(View view) {
         if(view.getId()==R.id.main_tab_three){
-            startActivity(new Intent(this,LoginActivity.class));
+//            startActivity(new Intent(this,LoginActivity.class));
+            publishPopup.showPopupWindow();
         }
     }
 

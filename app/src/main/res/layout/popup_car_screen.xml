@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="#F6F6F8"
+        android:layout_height="wrap_content">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:textSize="14sp"
+            android:textColor="@color/westore_text_dark"
+            android:text="价格区间"
+            android:paddingLeft="@dimen/padding_15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_height="wrap_content"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingRight="15dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:paddingLeft="2dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/shape_input_line"
+                android:layout_height="35dp">
+
+            <EditText
+                    android:layout_width="70dp"
+                    android:background="@color/transparent"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/westore_text_dark"
+                    android:layout_height="match_parent"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/westore_text_dark_gray"
+                    android:text="万"
+                    android:paddingLeft="2dp"
+                    android:textSize="15sp"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+        <View
+                android:layout_width="15dp"
+                android:background="@color/westore_text_dark_gray"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_height="@dimen/padding_1dp"/>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:paddingLeft="2dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/shape_input_line"
+                android:layout_height="35dp">
+
+            <EditText
+                    android:layout_width="70dp"
+                    android:background="@color/transparent"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/westore_text_dark"
+                    android:layout_height="match_parent"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/westore_text_dark_gray"
+                    android:text="万"
+                    android:paddingLeft="2dp"
+                    android:textSize="15sp"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+            android:layout_width="match_parent"
+            android:textSize="14sp"
+            android:textColor="@color/westore_text_dark"
+            android:text="车源类型"
+            android:paddingLeft="@dimen/padding_15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_height="wrap_content"/>
+
+    <RadioGroup
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:gravity="center_vertical"
+            android:paddingRight="15dp"
+            android:layout_height="wrap_content">
+
+        <RadioButton
+                android:layout_width="90dp"
+                android:button="@null"
+                android:textSize="@dimen/text_size_14sp"
+                android:background="@drawable/selector_btn_blue_bg"
+                android:textColor="@drawable/selector_btn_blue_text"
+                android:text="全部"
+                android:gravity="center"
+                android:layout_marginRight="20dp"
+                android:layout_height="35dp"/>
+
+        <RadioButton
+                android:layout_width="90dp"
+                android:button="@null"
+                android:textSize="@dimen/text_size_14sp"
+                android:background="@drawable/selector_btn_blue_bg"
+                android:textColor="@drawable/selector_btn_blue_text"
+                android:text="现车"
+                android:gravity="center"
+                android:layout_height="35dp"/>
+
+    </RadioGroup>
+
+
+    <TextView
+            android:layout_width="match_parent"
+            android:textSize="14sp"
+            android:textColor="@color/westore_text_dark"
+            android:text="商家类型"
+            android:paddingLeft="@dimen/padding_15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_height="wrap_content"/>
+
+    <RadioGroup
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:gravity="center_vertical"
+            android:paddingRight="15dp"
+            android:layout_height="wrap_content">
+
+        <RadioButton
+                android:layout_width="90dp"
+                android:button="@null"
+                android:textSize="@dimen/text_size_14sp"
+                android:background="@drawable/selector_btn_blue_bg"
+                android:textColor="@drawable/selector_btn_blue_text"
+                android:text="全部"
+                android:gravity="center"
+                android:layout_marginRight="20dp"
+                android:layout_height="35dp"/>
+
+        <RadioButton
+                android:layout_width="90dp"
+                android:button="@null"
+                android:textSize="@dimen/text_size_14sp"
+                android:background="@drawable/selector_btn_blue_bg"
+                android:textColor="@drawable/selector_btn_blue_text"
+                android:text="公司"
+                android:gravity="center"
+                android:layout_marginRight="20dp"
+                android:layout_height="35dp"/>
+
+        <RadioButton
+                android:layout_width="90dp"
+                android:button="@null"
+                android:textSize="@dimen/text_size_14sp"
+                android:background="@drawable/selector_btn_blue_bg"
+                android:textColor="@drawable/selector_btn_blue_text"
+                android:text="个人"
+                android:gravity="center"
+                android:layout_height="35dp"/>
+
+    </RadioGroup>
+
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:paddingTop="20dp"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding_20dp"
+            android:layout_height="wrap_content">
+
+        <Button
+                android:layout_width="wrap_content"
+                android:background="@drawable/shape_gray_bg_round"
+                android:textSize="15sp"
+                android:text="清空"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/westore_text_dark"
+                android:layout_height="40dp"/>
+
+        <Button
+                android:layout_width="wrap_content"
+                android:background="@drawable/shape_red_bg_round"
+                android:textSize="15sp"
+                android:text="确定"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/white"
+                android:layout_height="40dp"/>
+    </LinearLayout>
+
+</LinearLayout>
