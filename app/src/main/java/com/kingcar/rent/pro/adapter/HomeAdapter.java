@@ -8,7 +8,12 @@ import android.view.ViewGroup;
 
 import com.kingcar.rent.pro.ITEM_TYPE;
 import com.kingcar.rent.pro.adapter.holder.BannerHolderBuilder;
+import com.kingcar.rent.pro.adapter.holder.BaoXianBuilder;
+import com.kingcar.rent.pro.adapter.holder.CarMenuOneBuilder;
+import com.kingcar.rent.pro.adapter.holder.CarMenuThreeBuilder;
+import com.kingcar.rent.pro.adapter.holder.CarMenuTwoBuilder;
 import com.kingcar.rent.pro.adapter.holder.ClassificationHolderBuilder;
+import com.kingcar.rent.pro.adapter.holder.SecondKillBuilder;
 import com.kingcar.rent.pro.model.HomeData;
 
 import java.util.ArrayList;
@@ -52,6 +57,21 @@ public class HomeAdapter extends RecyclerView.Adapter {
         } else if (viewType == ITEM_TYPE.CLASSIFICATION_TYPE.ordinal()) {
             return new ClassificationHolderBuilder(mContext,parent).build();
 
+        } else if (viewType == ITEM_TYPE.CAR_MENU_ONE.ordinal()) {
+            return new CarMenuOneBuilder(mContext,parent).build();
+
+        } else if (viewType == ITEM_TYPE.SECOND_KILL.ordinal()) {
+            return new SecondKillBuilder(mContext,parent).build();
+
+        } else if (viewType == ITEM_TYPE.CAR_MENU_TWO.ordinal()) {
+            return new CarMenuTwoBuilder(mContext,parent).build();
+
+        } else if (viewType == ITEM_TYPE.BAO_XIAN.ordinal()) {
+            return new BaoXianBuilder(mContext,parent).build();
+
+        } else if (viewType == ITEM_TYPE.CAR_MENU_THREE.ordinal()) {
+            return new CarMenuThreeBuilder(mContext,parent).build();
+
         }
         return null;
     }
@@ -61,11 +81,25 @@ public class HomeAdapter extends RecyclerView.Adapter {
         HomeData homeData = dataList.get(position);
 
         if (holder instanceof BannerHolderBuilder.ViewHolder) {
-            BannerHolderBuilder.ViewHolder bannerHolder = (BannerHolderBuilder.ViewHolder) holder;
-
+            BannerHolderBuilder.ViewHolder viewHolder = (BannerHolderBuilder.ViewHolder) holder;
 
         } else if (holder instanceof ClassificationHolderBuilder.ViewHolder) {
-            ClassificationHolderBuilder.ViewHolder classificationHolder = (ClassificationHolderBuilder.ViewHolder) holder;
+            ClassificationHolderBuilder.ViewHolder viewHolder = (ClassificationHolderBuilder.ViewHolder) holder;
+
+        } else if (holder instanceof CarMenuOneBuilder.ViewHolder) {
+            CarMenuOneBuilder.ViewHolder viewHolder = (CarMenuOneBuilder.ViewHolder) holder;
+
+        } else if (holder instanceof SecondKillBuilder.ViewHolder) {
+            SecondKillBuilder.ViewHolder viewHolder = (SecondKillBuilder.ViewHolder) holder;
+
+        } else if (holder instanceof CarMenuTwoBuilder.ViewHolder) {
+            CarMenuTwoBuilder.ViewHolder viewHolder = (CarMenuTwoBuilder.ViewHolder) holder;
+
+        } else if (holder instanceof BaoXianBuilder.ViewHolder) {
+            BaoXianBuilder.ViewHolder viewHolder = (BaoXianBuilder.ViewHolder) holder;
+
+        } else if (holder instanceof CarMenuThreeBuilder.ViewHolder) {
+            CarMenuThreeBuilder.ViewHolder viewHolder = (CarMenuThreeBuilder.ViewHolder) holder;
 
         }
 
