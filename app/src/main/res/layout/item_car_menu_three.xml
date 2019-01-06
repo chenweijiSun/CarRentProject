@@ -16,13 +16,12 @@
         android:paddingRight="@dimen/home_margin_1">
 
         <TextView
+            style="@style/e_200_2018"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="2"
-            android:text="12312312312312312312312"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:text="12312312312312312312312" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -32,19 +31,17 @@
             android:paddingBottom="10dp">
 
             <TextView
+                style="@style/e_98_11_9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="13.29万"
-                android:textColor="@color/red"
-                android:textSize="16sp" />
+                android:text="13.29万" />
 
             <TextView
+                style="@style/e_98_11_9_1_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:text="14.29万"
-                android:textColor="@color/westore_text_dark_gray"
-                android:textSize="13sp" />
+                android:paddingLeft="8dp"
+                android:text="14.29万" />
 
         </LinearLayout>
 

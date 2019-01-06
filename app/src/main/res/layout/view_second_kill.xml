@@ -181,7 +181,7 @@
                 android:maxLines="2"
                 android:text="12312312312312312312312"
                 android:textColor="@android:color/black"
-                android:textSize="16sp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -196,7 +196,7 @@
                     android:layout_height="wrap_content"
                     android:text="13.29万"
                     android:textColor="@color/red"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -205,13 +205,13 @@
                     android:paddingLeft="15dp"
                     android:text="14.29万"
                     android:textColor="@color/westore_text_dark_gray"
-                    android:textSize="15sp" />
+                    android:textSize="11sp" />
 
             </LinearLayout>
 
             <TextView
-                android:layout_width="130dp"
-                android:layout_height="35dp"
+                android:layout_width="122dp"
+                android:layout_height="33dp"
                 android:background="@drawable/selector_btn_red"
                 android:gravity="center"
                 android:textStyle="bold"

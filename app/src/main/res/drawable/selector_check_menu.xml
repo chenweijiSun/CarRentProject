@@ -2,16 +2,21 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:state_checked="false">
-        <shape>
-            <solid android:color="@color/white"/>
-        </shape>
+        <layer-list>
+            <!-- layer-list 第二层右上角的图片 -->
+            <item android:left="50dp">
+                <bitmap android:src="@mipmap/icon_down_black"
+                    android:gravity="center"/>
+            </item>
+
+        </layer-list>
     </item>
 
     <item android:state_checked="true">
         <layer-list>
             <!-- layer-list 第二层右上角的图片 -->
-            <item android:left="50dp">
-                <bitmap android:src="@mipmap/icon_search"
+            <item android:left="45dp">
+                <bitmap android:src="@mipmap/icon_up_red"
                         android:gravity="center"/>
             </item>
 
