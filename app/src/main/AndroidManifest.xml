@@ -127,6 +127,10 @@
         <activity android:name=".ui.login.ForgotPwdActivity"/>
         <activity android:name=".ui.login.RegisterActivity"/>
         <activity android:name=".ui.carsource.CarSourceListActivity"/>
+        <activity android:name=".ui.mine.SettingActivity" />
+        <activity android:name=".ui.mine.EditPhoneActivity" />
+        <activity android:name=".ui.mine.EditPhoneNewActivity" />
+        <activity android:name=".ui.mine.EditPwdActivity" />
 
     </application>
 
