@@ -28,10 +28,12 @@ import android.view.View;
 
 import com.kingcar.rent.pro.R;
 import com.kingcar.rent.pro.base.BaseFragment;
+import com.kingcar.rent.pro.ui.mine.AddressActivity;
 import com.kingcar.rent.pro.ui.mine.CouponActivity;
 import com.kingcar.rent.pro.ui.mine.MessageActivity;
 import com.kingcar.rent.pro.ui.mine.SettingActivity;
 import com.kingcar.rent.pro.ui.mine.idverify.IdVerifyActivity;
+import com.kingcar.rent.pro.ui.mine.order.OrderHomeActivity;
 
 import butterknife.OnClick;
 
@@ -69,6 +71,13 @@ public class MineFragment extends BaseFragment {
                 break;
             case R.id.rel_verify_id:
                 startActivity(new Intent(mActivity, IdVerifyActivity.class));
+                break;
+
+            case R.id.tv_address:
+                startActivity(new Intent(mActivity, AddressActivity.class));
+                break;
+            case R.id.ll_order:
+                startActivity(new Intent(mActivity, OrderHomeActivity.class));
                 break;
 
         }

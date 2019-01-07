@@ -73,6 +73,7 @@ dependencies {
     implementation project(':SwipyRefreshLayoutLib')
     //城市选择控件
     implementation project(':citypicker')
+    //省市区选择
     implementation 'liji.library.dev:citypickerview:3.1.5'
     //BasePopup通用化弹出框
     implementation 'com.github.razerdp:BasePopup:2.1.5'
