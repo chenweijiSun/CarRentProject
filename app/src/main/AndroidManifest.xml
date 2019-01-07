@@ -131,6 +131,17 @@
         <activity android:name=".ui.mine.EditPhoneActivity" />
         <activity android:name=".ui.mine.EditPhoneNewActivity" />
         <activity android:name=".ui.mine.EditPwdActivity" />
+        <activity android:name=".ui.mine.CouponActivity" />
+        <activity android:name=".ui.mine.MessageActivity" />
+        <activity android:name=".ui.mine.MessageDetailActivity" />
+        <activity android:name=".ui.mine.idverify.IdVerifyActivity" />
+        <activity android:name=".ui.mine.idverify.IdVerifyIdActivity" />
+        <activity android:name=".ui.mine.idverify.CompanyVerifyActivity" />
+        <activity android:name=".ui.mine.idverify.CompanyVerifySureActivity" />
+        <activity android:name=".ui.mine.wallet.WalletActivity" />
+        <activity android:name=".ui.mine.wallet.BillRecordActivity" />
+        <activity android:name=".ui.mine.wallet.RechargeActivity" />
+        <activity android:name=".ui.mine.wallet.PaymentActivity" />
 
     </application>
 

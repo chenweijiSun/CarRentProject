@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_toolbar" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginTop="0.6dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_check_menu_line"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="可用"
+            android:textColor="@drawable/check_text_color_red"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_check_menu_line"
+            android:button="@null"
+            android:gravity="center"
+            android:text="失效"
+            android:textColor="@drawable/check_text_color_red"
+            android:textSize="15sp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="14dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:background="@drawable/shape_couopn_t1">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingLeft="17dp"
+                android:paddingTop="18dp"
+                android:paddingRight="17dp"
+                android:text="100元优惠券（满599元可用）"
+                android:textColor="#ffffffff"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_shop_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name"
+                android:maxLines="1"
+                android:paddingLeft="17dp"
+                android:paddingTop="7dp"
+                android:text="商城优惠券"
+                android:textColor="#fff7f7f7"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="67dp"
+                android:layout_height="27dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_shiyong"
+                android:gravity="center"
+                android:text="去使用"
+                android:textColor="#ffffffff"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:background="@drawable/shape_couopn_t2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="17dp"
+                android:text="有效时间：2015-11-11至2016-02-03"
+                android:textColor="#ffff2a00"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="14dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:background="@drawable/shape_couopn_t3">
+
+            <TextView
+                android:layout_width="67dp"
+                android:layout_height="27dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_guoqi"
+                android:gravity="center"
+                android:text="已过期"
+                android:textColor="#ffffffff"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:background="@drawable/shape_couopn_t2">
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

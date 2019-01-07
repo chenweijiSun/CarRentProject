@@ -22,12 +22,20 @@
  */
 package com.kingcar.rent.pro.ui.fragment;
 
+import android.content.Intent;
 import android.os.Message;
+import android.view.View;
+
 import com.kingcar.rent.pro.R;
 import com.kingcar.rent.pro.base.BaseFragment;
+import com.kingcar.rent.pro.ui.mine.CouponActivity;
+import com.kingcar.rent.pro.ui.mine.MessageActivity;
+import com.kingcar.rent.pro.ui.mine.SettingActivity;
+import com.kingcar.rent.pro.ui.mine.idverify.IdVerifyActivity;
+
+import butterknife.OnClick;
 
 /**
- *
  * @author chenweiji
  * @version Id: MineFragment.java, v 0.1 2019/1/3 11:01 chenweiji Exp $$
  */
@@ -45,5 +53,24 @@ public class MineFragment extends BaseFragment {
     @Override
     protected void ui(int what, Message msg) {
 
+    }
+
+    @OnClick({R.id.iv_setting, R.id.iv_message, R.id.tv_coupon})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.iv_setting:
+                startActivity(new Intent(mActivity, SettingActivity.class));
+                break;
+            case R.id.iv_message:
+                startActivity(new Intent(mActivity, MessageActivity.class));
+                break;
+            case R.id.tv_coupon:
+                startActivity(new Intent(mActivity, CouponActivity.class));
+                break;
+            case R.id.rel_verify_id:
+                startActivity(new Intent(mActivity, IdVerifyActivity.class));
+                break;
+
+        }
     }
 }
