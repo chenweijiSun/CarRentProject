@@ -1,1 +1,1 @@
-include ':app',':AdvancedLuban',':SwipyRefreshLayoutLib',':citypicker'
+include ':app', ':AdvancedLuban', ':SwipyRefreshLayoutLib', ':citypicker', ':SwipeRecyclerView'

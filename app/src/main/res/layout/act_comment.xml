@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_background_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_toolbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop" />
+
+        <com.kingcar.rent.pro.widget.MyRatingBar
+            android:id="@+id/ratingBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            app:starCount="5"
+            app:starEmpty="@mipmap/icon_star_false"
+            app:starFill="@mipmap/icon_star_true"
+            app:starHalf="@mipmap/icon_star_true"
+            app:starImageSize="24dp"
+            app:starPadding="15dp"
+            app:starStep="5"
+            app:stepSize="Full" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:gravity="top"
+        android:paddingTop="10dp"
+        android:hint="请输入你对该商品的评价"
+        android:minLines="3"
+        android:background="@color/white"
+        android:textColor="#ff999999"
+        android:textSize="13sp" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <ImageView
+            android:layout_width="69dp"
+            android:layout_height="69dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_photo" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/top_7"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/padding_15dp"
+        android:paddingRight="@dimen/padding_15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:text="服务态度"
+            android:textColor="@color/westore_text_dark"
+            android:textSize="15sp" />
+
+        <com.kingcar.rent.pro.widget.MyRatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:gravity="center_vertical"
+            app:starCount="5"
+            app:starEmpty="@mipmap/icon_star_false"
+            app:starFill="@mipmap/icon_star_true"
+            app:starHalf="@mipmap/icon_star_true"
+            app:starImageSize="24dp"
+            app:starPadding="15dp"
+            app:starStep="5"
+            app:stepSize="Full" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/padding_15dp"
+        android:paddingRight="@dimen/padding_15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:text="发货速度"
+            android:textColor="@color/westore_text_dark"
+            android:textSize="15sp" />
+
+        <com.kingcar.rent.pro.widget.MyRatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:gravity="center_vertical"
+            app:starCount="5"
+            app:starEmpty="@mipmap/icon_star_false"
+            app:starFill="@mipmap/icon_star_true"
+            app:starHalf="@mipmap/icon_star_true"
+            app:starImageSize="24dp"
+            app:starPadding="15dp"
+            app:starStep="5"
+            app:stepSize="Full" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/padding_15dp"
+        android:paddingRight="@dimen/padding_15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:text="物流速度"
+            android:textColor="@color/westore_text_dark"
+            android:textSize="15sp" />
+
+        <com.kingcar.rent.pro.widget.MyRatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:gravity="center_vertical"
+            app:starCount="5"
+            app:starEmpty="@mipmap/icon_star_false"
+            app:starFill="@mipmap/icon_star_true"
+            app:starHalf="@mipmap/icon_star_true"
+            app:starImageSize="24dp"
+            app:starPadding="15dp"
+            app:starStep="5"
+            app:stepSize="Full" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:text="匿名评价"
+            android:paddingRight="15dp"
+            android:textColor="#ff999999"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:button="@drawable/selector_check_switch"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_common_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/margin_common_1"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="@dimen/margin_common_1"
+        android:background="@drawable/selector_btn_common"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+</LinearLayout>

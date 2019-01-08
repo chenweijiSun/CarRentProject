@@ -145,9 +145,13 @@
         <activity android:name=".ui.mine.AddressActivity" />
         <activity android:name=".ui.mine.AddressEditActivity" />
         <activity android:name=".ui.mine.order.OrderHomeActivity" />
-        <activity android:name=".ui.mine.order.RentCarActivity" />
+        <activity android:name=".ui.mine.order.RentSaleCarActivity" />
         <activity android:name=".ui.mine.order.BuyCarActivity" />
         <activity android:name=".ui.mine.order.BuyCarDetailActivity" />
+        <activity android:name=".ui.mine.order.OrderGoodsActivity" />
+        <activity android:name=".ui.mine.order.OrderGoodsDetailActivity" />
+        <activity android:name=".ui.mine.order.CommentActivity" />
+        <activity android:name=".ui.mine.order.TuiKuanActivity" />
 
     </application>
 

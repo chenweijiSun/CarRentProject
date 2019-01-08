@@ -24,14 +24,16 @@ public class OrderHomeActivity extends ToolBarActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.rel_rent_car:
-                startActivity(new Intent(this,RentCarActivity.class));
+                startActivity(new Intent(this,RentSaleCarActivity.class));
                 break;
             case R.id.rel_buy_car:
                 startActivity(new Intent(this,BuyCarActivity.class));
                 break;
             case R.id.rel_sale_car:
+                startActivity(new Intent(this,RentSaleCarActivity.class));
                 break;
             case R.id.rel_goods:
+                startActivity(new Intent(this,OrderGoodsActivity.class));
                 break;
             case R.id.rel_wuliu:
                 break;

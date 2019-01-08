@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_background_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_toolbar" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginTop="0.6dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_check_menu_line_2"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="全部"
+            android:textColor="@drawable/check_text_color_red"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_check_menu_line_2"
+            android:button="@null"
+            android:gravity="center"
+            android:text="待付款"
+            android:textColor="@drawable/check_text_color_red"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_check_menu_line_2"
+            android:button="@null"
+            android:gravity="center"
+            android:text="待发货"
+            android:textColor="@drawable/check_text_color_red"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_check_menu_line_2"
+            android:button="@null"
+            android:gravity="center"
+            android:text="待收货"
+            android:textColor="@drawable/check_text_color_red"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_check_menu_line_2"
+            android:button="@null"
+            android:gravity="center"
+            android:text="待评价"
+            android:textColor="@drawable/check_text_color_red"
+            android:textSize="15sp" />
+    </RadioGroup>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

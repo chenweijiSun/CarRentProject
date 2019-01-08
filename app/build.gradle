@@ -79,4 +79,6 @@ dependencies {
     implementation 'com.github.razerdp:BasePopup:2.1.5'
     //轮播图
     implementation 'cn.bingoogolapple:bga-banner:2.2.5'
+    //可向右滑动扩展的RecyclerView
+    implementation project(':SwipeRecyclerView')
 }
