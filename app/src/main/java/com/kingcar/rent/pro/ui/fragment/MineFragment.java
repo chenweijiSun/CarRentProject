@@ -31,6 +31,7 @@ import com.kingcar.rent.pro.base.BaseFragment;
 import com.kingcar.rent.pro.ui.mine.AddressActivity;
 import com.kingcar.rent.pro.ui.mine.CouponActivity;
 import com.kingcar.rent.pro.ui.mine.MessageActivity;
+import com.kingcar.rent.pro.ui.mine.MyCollectActivity;
 import com.kingcar.rent.pro.ui.mine.SettingActivity;
 import com.kingcar.rent.pro.ui.mine.idverify.IdVerifyActivity;
 import com.kingcar.rent.pro.ui.mine.order.OrderHomeActivity;
@@ -78,6 +79,9 @@ public class MineFragment extends BaseFragment {
                 break;
             case R.id.ll_order:
                 startActivity(new Intent(mActivity, OrderHomeActivity.class));
+                break;
+            case R.id.tv_collect:
+                startActivity(new Intent(mActivity, MyCollectActivity.class));
                 break;
 
         }
