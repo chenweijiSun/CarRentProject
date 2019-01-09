@@ -153,6 +153,7 @@
         <activity android:name=".ui.mine.order.CommentActivity" />
         <activity android:name=".ui.mine.order.TuiKuanActivity" />
         <activity android:name=".ui.mine.MyCollectActivity" />
+        <activity android:name=".ui.rentcar.RentCarActivity" />
 
     </application>
 
