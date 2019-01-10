@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_checked="false">
+        <layer-list>
+            <item android:width="90dp" android:height="2dp" android:gravity="bottom|center_horizontal">
+                <shape>
+                    <solid android:color="@color/transparent" />
+                </shape>
+            </item>
+            <item android:right="100dp">
+                <bitmap android:src="@mipmap/icon_wangdian_false"
+                    android:gravity="center"/>
+            </item>
+        </layer-list>
+
+    </item>
+
+    <item android:state_checked="true">
+        <layer-list>
+            <item android:width="90dp" android:height="2dp" android:gravity="bottom|center_horizontal">
+                <shape>
+                    <solid android:color="#FCC942" />
+                </shape>
+            </item>
+
+            <item android:right="100dp">
+                <bitmap android:src="@mipmap/icon_wangdiian_true"
+                    android:gravity="center"/>
+            </item>
+
+        </layer-list>
+    </item>
+</selector>

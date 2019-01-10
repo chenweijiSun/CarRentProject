@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F9FC"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_toolbar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="@dimen/padding_10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_jiashirenzheng" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_20dp"
+            android:paddingBottom="15dp"
+            android:text="居民身份证上传"
+            android:textColor="@color/westore_text_dark_gray"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="121dp"
+                android:layout_marginRight="6dp"
+                android:src="@mipmap/icon_jiashi_normal" />
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="121dp"
+                android:layout_marginLeft="6dp"
+                android:src="@mipmap/icon_jiashi_normal" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/padding_15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="驾驶证信息采集"
+            android:textColor="@color/westore_text_dark_gray"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="0.6dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="42dp"
+                android:text="初次领证日期:"
+                android:textColor="#ff333333"
+                android:textSize="14sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:gravity="center_vertical"
+                android:hint=""
+                android:textColor="#ff333333"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:background="#DBDBDB" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="0.6dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="42dp"
+                android:text="驾驶证有效期:"
+                android:textColor="#ff333333"
+                android:textSize="14sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:gravity="center_vertical"
+                android:hint=""
+                android:textColor="#ff333333"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:background="#DBDBDB" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="0.6dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"
+                android:text="档案编号（副页）:"
+                android:textColor="#ff333333"
+                android:textSize="14sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:gravity="center_vertical"
+                android:hint=""
+                android:textColor="#ff333333"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_common_height"
+        android:layout_marginLeft="@dimen/margin_common_1"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="@dimen/margin_common_1"
+        android:background="@drawable/selector_btn_common"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+</LinearLayout>

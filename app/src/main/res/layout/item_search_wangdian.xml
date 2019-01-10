@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_15dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12dp"
+        android:src="@mipmap/icon_loction" />
+
+    <TextView
+
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/tv_distance"
+        android:layout_toRightOf="@+id/iv1"
+        android:text="sadasdasdasd"
+        android:textColor="@color/westore_text_dark"
+        android:textSize="@dimen/text_size_14sp" />
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_toLeftOf="@+id/tv_distance"
+        android:layout_toRightOf="@+id/iv1"
+        android:text="sadasdasdaasdasdasdasdasdasdsd"
+        android:textColor="@color/westore_text_dark_gray"
+        android:textSize="@dimen/text_size_14sp" />
+
+
+    <TextView
+        android:id="@+id/tv_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="12dp"
+        android:layout_centerVertical="true"
+        android:text="605.3km"
+        android:textColor="@color/westore_text_dark_gray"
+        android:textSize="@dimen/text_size_14sp" />
+</RelativeLayout>
