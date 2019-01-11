@@ -15,8 +15,8 @@
         android:background="@drawable/selector_lijiyongche"
         android:gravity="center"
         android:shadowColor="#781c1c1b"
-        android:shadowDx="10dp"
-        android:shadowDy="10dp"
+        android:shadowDx="0"
+        android:shadowDy="0"
         android:text="立即用车"
         android:textColor="#ffeff4ee"
         android:textSize="16sp" />
